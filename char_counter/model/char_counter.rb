@@ -3,7 +3,7 @@ class CharCounter
 	class << self
 		def count(cadena)
 			hash = Hash.new {nil}
-			if cadena != nil
+			if cadena == nil
 				return hash
 			else
 				cadena.each_char{ |c|
