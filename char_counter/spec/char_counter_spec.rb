@@ -12,7 +12,7 @@ describe 'CharCounter' do
     dic = CharCounter.count('a')
     dic['b'].should be nil
   end  
-=begin  
+
   it 'should return {a=>2,t=>1,d=>1,0=>1 } when string is atado' do
     dic = CharCounter.count('atado')
     dic['a'].should be 2
@@ -20,7 +20,7 @@ describe 'CharCounter' do
     dic['d'].should be 1
     dic['o'].should be 1
   end  
-
+=begin  
   it 'should return {a=>2,t=>1,d=>1,0=>1 } when string is ata do' do
     dic = CharCounter.count('ata do')
     dic['a'].should be 2
