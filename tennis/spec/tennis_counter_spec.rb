@@ -19,6 +19,12 @@ describe 'TennisCounter' do
 		tennisCounter.counterPlayerOne['sets'].should be 0
 	end
 
-	
+	it 'should return 0 points and 1 game when player one wins a game' do
+		tennisCounter.playerOneScoredAPoint
+		tennisCounter.playerOneScoredAPoint
+		tennisCounter.playerOneScoredAPoint
+		tennisCounter.counterPlayerOne['points'].should be 0
+		tennisCounter.counterPlayerOne['games'].should be 1
+	end
 
 end
