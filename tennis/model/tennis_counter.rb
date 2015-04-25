@@ -64,6 +64,7 @@ class TennisCounter
 		else
 			@counterPlayerOne['games'] += 1
 			@counterPlayerOne['points'] = 0
+			@counterPlayerTwo['points'] = 0
 		end
 	end
 

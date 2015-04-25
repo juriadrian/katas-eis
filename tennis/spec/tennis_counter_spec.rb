@@ -31,6 +31,7 @@ describe 'TennisCounter' do
 		tennisCounter.playerOneScoredAPoint
 		tennisCounter.counterPlayerOne['points'].should be 0
 		tennisCounter.counterPlayerOne['games'].should be 1
+		tennisCounter.counterPlayerTwo['points'].should be 0
 	end
 
 end
