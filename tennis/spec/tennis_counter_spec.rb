@@ -10,6 +10,9 @@ describe 'TennisCounter' do
 
 	it 'should return 0' do
 		tennisCounter.pointsPlayerOne.should be 0
+		tennisCounter.pointsPlayerTwo.should be 0
 	end
+
+
 
 end
