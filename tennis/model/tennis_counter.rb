@@ -12,7 +12,25 @@ class TennisCounter
 		return @counterPlayerOne['points']
 	end
 
+	def counterPlayerOne
+		return @counterPlayerOne
+	end
+
 	def pointsPlayerTwo()
 		return @counterPlayerOne['points']
 	end
+
+	def playerOneScoredAPoint()
+		case @counterPlayerOne['points']
+		when 0
+			@counterPlayerOne['points'] += 15
+		when 15
+			@counterPlayerOne['points'] += 15
+		when 30
+			@counterPlayerOne['points'] += 10
+		when 40
+			playerOneAddGame()
+		end
+	end
+
 end
