@@ -90,10 +90,34 @@ class TennisCounter
 
 	def playerTwoWinGame
 		if @counterPlayerTwo['games'] == 5
-			playerOneWinSet
+			playerTwoWinSet
 		else
 			@counterPlayerTwo['games'] += 1
 			@counterPlayerTwo['points'] = 0
+		end
+	end
+
+	def playerOneWinSet
+		if counterPlayerOne['sets'] == 1
+			playerOneWinMatch
+		else
+			@counterPlayerOne['points'] = 0
+			@counterPlayerOne['games'] = 0
+			@counterPlayerOne['sets'] += 1
+			@counterPlayerTwo['points'] = 0
+			@counterPlayerTwo['games'] = 0
+		end
+	end
+
+	def playerTwoWinSet
+		if counterPlayerTwo['sets'] == 1
+			playerTwoWinMatch
+		else
+			@counterPlayerTwo['points'] = 0
+			@counterPlayerTwo['games'] = 0
+			@counterPlayerTwo['sets'] += 1
+			@counterPlayerOne['points'] = 0
+			@counterPlayerOne['games'] = 0
 		end
 	end
 

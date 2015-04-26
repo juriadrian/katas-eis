@@ -63,6 +63,17 @@ describe 'TennisCounter' do
 		tennisCounter.deuce.should be true
 	end
 
+	it 'should return 1 set for player two' do
+		tennisCounter.counterPlayerTwo['games'] = 5
+		tennisCounter.playerTwoWinGame
+		tennisCounter.counterPlayerTwo['points'] = 0
+		tennisCounter.counterPlayerTwo['games'] = 0
+		tennisCounter.counterPlayerTwo['sets'] = 1
+		tennisCounter.counterPlayerOne['points'] = 0
+		tennisCounter.counterPlayerOne['games'] = 0
+		tennisCounter.counterPlayerOne['sets'] = 0
+	end
 
+ 
 
 end
