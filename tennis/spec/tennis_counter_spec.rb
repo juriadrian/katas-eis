@@ -58,6 +58,11 @@ describe 'TennisCounter' do
 		expect(tennisCounter.counterPlayerTwo['points']).to eq('adv')
 	end
 
+	it 'should return deuce when playerTwo missed a point' do
+		tennisCounter.playerOneScoredAPoint
+		tennisCounter.deuce.should be true
+	end
+
 
 
 end
