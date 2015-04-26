@@ -52,4 +52,12 @@ describe 'TennisCounter' do
 		tennisCounter.deuce.should be true
 	end
 
+	it 'should return  advantage player two when he score in deuce' do
+		tennisCounter.playerTwoScoredAPoint
+		tennisCounter.counterPlayerOne['points'].should be 40
+		expect(tennisCounter.counterPlayerTwo['points']).to eq('adv')
+	end
+
+
+
 end
