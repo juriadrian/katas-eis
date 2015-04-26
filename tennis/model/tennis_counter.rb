@@ -99,6 +99,7 @@ class TennisCounter
 
 	def playerOneWinSet
 		if counterPlayerOne['sets'] == 1
+			@counterPlayerOne['sets'] += 1
 			playerOneWinMatch
 		else
 			@counterPlayerOne['points'] = 0
@@ -111,6 +112,7 @@ class TennisCounter
 
 	def playerTwoWinSet
 		if counterPlayerTwo['sets'] == 1
+			@counterPlayerTwo['sets'] += 1
 			playerTwoWinMatch
 		else
 			@counterPlayerTwo['points'] = 0
@@ -120,5 +122,14 @@ class TennisCounter
 			@counterPlayerOne['games'] = 0
 		end
 	end
+
+	def playerOneWinMatch
+		puts 'player one is the winner'
+	end
+
+	def playerTwoWinMatch
+		puts 'player two is the winner'
+	end
+
 
 end

@@ -74,6 +74,13 @@ describe 'TennisCounter' do
 		tennisCounter.counterPlayerOne['sets'] = 0
 	end
 
+	it 'should return that the player two is the winner' do
+		tennisCounter.counterPlayerTwo['games'] = 5
+		tennisCounter.playerTwoWinGame
+		tennisCounter.counterPlayerTwo['sets'].should be 2
+	end
+	
+
  
 
 end
