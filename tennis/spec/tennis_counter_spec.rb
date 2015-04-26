@@ -45,4 +45,11 @@ describe 'TennisCounter' do
 		tennisCounter.counterPlayerTwo['games'].should be 0
 	end
 
+	it 'should return deuce when 40 - 40' do
+		tennisCounter.counterPlayerOne['points'] = 40
+		tennisCounter.counterPlayerTwo['points'] = 30
+		tennisCounter.playerTwoScoredAPoint
+		tennisCounter.deuce.should be true
+	end
+
 end

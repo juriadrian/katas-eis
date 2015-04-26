@@ -41,6 +41,14 @@ class TennisCounter
 		when 30
 			@counterPlayerOne['points'] += 10
 		when 40
+			if deuce
+				@counterPlayerOne['points'] = 'adv'
+			elsif counterPlayerTwo['points'] == 'adv'
+				counterPlayerTwo['points'] = 40
+			else
+				playerOneWinGame
+			end
+		when 'adv'
 			playerOneWinGame
 		end
 	end
@@ -54,8 +62,20 @@ class TennisCounter
 		when 30
 			@counterPlayerTwo['points'] += 10
 		when 40
-			playerOneWinGame
+			if deuce
+				@counterPlayerTwo['points'] = 'adv'
+			elsif counterPlayerOne['points'] == 'adv'
+				counterPlayerOne['points'] = 40
+			else
+				playerTwoWinGame
+			end
+		when 'adv'
+			playerTwoWinGame
 		end
+	end
+
+	def deuce
+		return @counterPlayerOne['points'] == 40 && @counterPlayerTwo['points'] == 40
 	end
 
 	def playerOneWinGame
