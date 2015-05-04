@@ -9,3 +9,6 @@ bundle exec rake
 cd ..
 cd tennis
 bundle exec rake
+cd ..
+cd batalla_naval
+bundle exec rake
