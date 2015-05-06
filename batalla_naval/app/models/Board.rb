@@ -14,7 +14,7 @@ class Board
   	@ships.push(smallShip) 
   end
 
-  def boatIn?(x, y)
+  def isEmptyPosition?(x, y)
   	exist = true
   	for s in @ships do
   		exist = exist && s.locationIs?(x, y)

@@ -111,4 +111,3 @@ DEPENDENCIES
   simplecov (= 0.8.0.pre)
   slim
   thin
-
