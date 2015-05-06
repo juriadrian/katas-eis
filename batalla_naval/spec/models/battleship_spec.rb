@@ -31,7 +31,13 @@ describe 'Battleship' do
     @board.createLargeShipInPosition("3:3")
     expect(@board.isEmptyPosition?("3:3")).to eq false
   end
-#expect(@board.ships.size).to eq 0
-#@board.createSmallShipInPosition("1:1")
+
+  it 'should return 2 ships in the board' do
+    expect(@board.ships.size).to eq 0
+    @board.createSmallShipInPosition("1:1")
+    expect(@board.ships.size).to eq 1
+    @board.createLargeShipInPosition("3:3")
+    expect(@board.ships.size).to eq 2    
+  end
 
 end
