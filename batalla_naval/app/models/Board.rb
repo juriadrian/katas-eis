@@ -8,6 +8,10 @@ class Board
   def initialize(x,y)
     @size = [x,y]
     @ships = []
+    @lastHit = nil
+    @water = nil
+    @hit = nil
+    @sink = nil
   end
 
   def createLocation(location)
@@ -50,15 +54,35 @@ class Board
     for s in @ships do
       if s.locationIs?(x, y) then
         s.hitAt(x, y)
-        ship = s
-        hit = true
+        @lastHit = s
+        @hit = true
       end
     end
-    if ship != nil && ship.gotSink?() then
+    if @lastHit == nil then
+      @water = true
+      @hit = false
+    elsif @lastHit.gotSink?() then
+      @sink = true
       board.delete(s)
     end
-    return hit
+  end
 
+  def getWater()
+    water = @water
+    @water = nil
+    return water
+  end
+
+  def getHit()
+    hit = @hit
+    @hit = nil
+    return hit
+  end
+
+  def getSink()
+    sink = @sink
+    @sink = nil
+    return sink
   end
 
 end
