@@ -54,7 +54,7 @@ class Board
         hit = true
       end
     end
-    if s.gotSink() then
+    if ship != nil && ship.gotSink?() then
       board.delete(s)
     end
     return hit

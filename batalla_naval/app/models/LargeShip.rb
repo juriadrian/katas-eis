@@ -23,7 +23,7 @@ class LargeShip
   		end
   	end
 
-  	def getSink()
+  	def gotSink?()
   		return @x[0] == nil && x[1] == nil
   	end
 end

@@ -28,7 +28,7 @@ describe 'Large Ship' do
   it 'should get sink when gets shot in both parts' do
   	@largeShip.hitAt(3, 3)
   	@largeShip.hitAt(3, 4)
-  	expect(@largeShip.getSink()).to eq true
+  	expect(@largeShip.gotSink?()).to eq true
   end
   	
 

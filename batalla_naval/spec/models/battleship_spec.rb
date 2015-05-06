@@ -53,7 +53,7 @@ describe 'Battleship' do
 
   it 'should hit the ship when there is a large ship in that location'do
     @board.createLargeShipInPosition("3:3")
-    expect(@board.shootAtPosition("3:3")).to eq false
+    expect(@board.shootAtPosition("3:3")).to eq true
   end
 
 end
