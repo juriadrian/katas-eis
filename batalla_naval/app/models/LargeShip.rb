@@ -22,4 +22,8 @@ class LargeShip
   			@y[1] = nil
   		end
   	end
+
+  	def getSink()
+  		return @x[0] == nil && x[1] == nil
+  	end
 end

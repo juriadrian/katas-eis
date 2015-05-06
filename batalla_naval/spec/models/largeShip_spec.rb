@@ -25,5 +25,12 @@ describe 'Large Ship' do
   	expect(@largeShip.y).to eq [nil, 4]
   end
 
+  it 'should get sink when gets shot in both parts' do
+  	@largeShip.hitAt(3, 3)
+  	@largeShip.hitAt(3, 4)
+  	expect(@largeShip.getSink()).to eq true
+  end
+  	
+
 end
 
