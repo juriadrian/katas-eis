@@ -15,9 +15,9 @@ class Board
   end
 
   def isEmptyPosition?(x, y)
-  	exist = true
+  	exist = false
   	for s in @ships do
-  		exist = exist && s.locationIs?(x, y)
+  		exist = exist || s.locationIs?(x, y)
   	end
   	return exist
   end
