@@ -17,12 +17,16 @@ class Board
     coords
   end
 
-  def createSmallShipInPosition(x, y)
-  	smallShip = SmallShip.new(x, y)
+  def createSmallShipInPosition(location)
+    xy = createLocation(location)
+  	smallShip = SmallShip.new(xy[0], xy[1])
   	@ships.push(smallShip) 
   end
 
-  def isEmptyPosition?(x, y)
+  def isEmptyPosition?(location)
+    xy = createLocation(location)
+    x = xy[0]
+    y = xy[1]
   	exist = false
   	for s in @ships do
   		exist = exist || s.locationIs?(x, y)

@@ -22,9 +22,9 @@ describe 'Battleship' do
 
 
   it 'should create a small ship in position 3:3' do
-    @board.createSmallShipInPosition(3, 3)
+    @board.createSmallShipInPosition("3:3")
     expect(@board.ships.size).to eq 1
-    expect(@board.isEmptyPosition?(3, 3)).to eq true
+    expect(@board.isEmptyPosition?("3:3")).to eq true
   end
 
 
