@@ -11,5 +11,9 @@ describe 'Large Ship' do
   	expect(@largeShip.locationIs?(3, 3)).to eq true
   end
 
+  it 'should the location be 3:4' do
+  	expect(@largeShip.locationIs?(3, 3)).to eq true
+  end
+
 end
 
