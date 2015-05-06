@@ -47,4 +47,8 @@ describe 'Battleship' do
     expect(@board.isEmptyPosition?("3:5")).to eq true
   end
 
+  it 'should miss the shot when there is no ship in that location'do
+    expect(@board.shootAtPosition("3:3")).to eq false
+  end
+
 end

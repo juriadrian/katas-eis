@@ -41,4 +41,21 @@ class Board
   	return exist
   end
 
+  def shootAtPosition(location)
+    xy = createLocation(location)
+    x = xy[0]
+    y = xy[1]
+    ship = nil
+    hit = false
+    for s in @ships do
+      if s.locationIs?(x, y) then
+        s.hitAt(x, y)
+        ship = s
+        hit = true
+      end
+    end
+    return hit
+
+  end
+
 end
