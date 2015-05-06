@@ -1,4 +1,5 @@
 require_relative 'SmallShip'
+require_relative 'LargeShip'
 
 class Board
   attr_reader :size
@@ -22,6 +23,12 @@ class Board
   	smallShip = SmallShip.new(xy[0], xy[1])
   	@ships.push(smallShip) 
   end
+
+  def createLargeShipInPosition(location)
+    xy = createLocation(location)
+    largeShip = LargeShip.new(xy[0], xy[1])
+    @ships.push(largeShip) 
+  end  
 
   def isEmptyPosition?(location)
     xy = createLocation(location)

@@ -11,3 +11,7 @@ end
 Then(/^position "(.*?)" is not empty$/) do |arg1|
   @board.isEmptyPosition?(arg1).should eq false
 end
+
+Given(/^I create a large ship in position "(.*?)"$/) do |arg1|
+  pending # express the regexp above with the code you wish you had
+end

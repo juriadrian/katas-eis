@@ -27,5 +27,11 @@ describe 'Battleship' do
     expect(@board.isEmptyPosition?("3:3")).to eq false
   end
 
+  it 'should not be empty if my large boat is in position 3:3' do
+    @board.createLargeShipInPosition("3:3")
+    expect(@board.isEmptyPosition?("3:3")).to eq false
+  end
+#expect(@board.ships.size).to eq 0
+#@board.createSmallShipInPosition("1:1")
 
 end
