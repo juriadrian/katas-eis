@@ -5,9 +5,12 @@ Given(/^a board with dimensions "(.*?)" x "(.*?)"$/) do |arg1, arg2|
 end
 
 Given(/^I create a small ship in position "(.*?)"$/) do |arg1|
-  @board.createSmallShipIn(arg1)
+	xy = arg1.split(':')
+	x = xy[0].to_i
+	y = xy[1].to_i
+  @board.createSmallShipInPosition(x, y)
 end
 
 Then(/^position "(.*?)" is not empty$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
+  @board.isEmptyPosition(arg1).should eq false
 end

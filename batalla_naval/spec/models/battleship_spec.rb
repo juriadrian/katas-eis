@@ -16,6 +16,11 @@ describe 'Battleship' do
     expect(@board.size[1]).to eq 5
   end
 
+  it 'should split the coords to two numbers' do
+    expect(@board.createLocation("3:3")).to eq [3, 3]
+  end
+
+
   it 'should create a small ship in position 3:3' do
     @board.createSmallShipInPosition(3, 3)
     expect(@board.ships.size).to eq 1

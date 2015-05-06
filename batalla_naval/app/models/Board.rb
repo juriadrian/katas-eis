@@ -9,6 +9,14 @@ class Board
     @ships = []
   end
 
+  def createLocation(location)
+    coords = []
+    xy = location.split(':')
+    coords.push(xy[0].to_i)
+    coords.push(xy[1].to_i)
+    coords
+  end
+
   def createSmallShipInPosition(x, y)
   	smallShip = SmallShip.new(x, y)
   	@ships.push(smallShip) 
