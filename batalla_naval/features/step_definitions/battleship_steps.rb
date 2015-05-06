@@ -31,3 +31,10 @@ Then(/^I get hit$/) do
   @board.getHit()
 end
 
+Then(/^I get water$/) do
+  @board.getWater()
+end
+
+Then(/^I get sink$/) do
+  @board.getSink()
+end
