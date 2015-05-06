@@ -54,6 +54,9 @@ class Board
         hit = true
       end
     end
+    if s.getSink() then
+      board.delete(s)
+    end
     return hit
 
   end

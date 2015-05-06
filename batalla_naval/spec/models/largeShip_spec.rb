@@ -19,5 +19,11 @@ describe 'Large Ship' do
   	expect(@largeShip.locationIs?(3, 5)).to eq false
   end
 
+  it 'should get shot' do
+  	@largeShip.hitAt(3, 3)
+  	expect(@largeShip.x).to eq [nil, 3]
+  	expect(@largeShip.y).to eq [nil, 4]
+  end
+
 end
 
