@@ -27,9 +27,9 @@ class Board
     xy = createLocation(location)
     x = xy[0]
     y = xy[1]
-  	exist = false
+  	exist = true
   	for s in @ships do
-  		exist = exist || s.locationIs?(x, y)
+  		exist = exist && !s.locationIs?(x, y)
   	end
   	return exist
   end
