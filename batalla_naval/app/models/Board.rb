@@ -49,8 +49,6 @@ class Board
     xy = createLocation(location)
     x = xy[0]
     y = xy[1]
-    ship = nil
-    hit = false
     for s in @ships do
       if s.locationIs?(x, y) then
         s.hitAt(x, y)
@@ -63,7 +61,8 @@ class Board
       @hit = false
     elsif @lastHit.gotSink?() then
       @sink = true
-      board.delete(s)
+      @ships.delete(s)
+      @lastHit = nil
     end
   end
 

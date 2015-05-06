@@ -28,6 +28,6 @@ Given(/^I shoot to position "(.*?)"$/) do |arg1|
 end
 
 Then(/^I get hit$/) do
-  pending # express the regexp above with the code you wish you had
+  @board.getHit()
 end
 

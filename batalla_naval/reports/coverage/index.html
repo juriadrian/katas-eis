@@ -14,27 +14,27 @@
       <img src="./assets/0.7.1/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2015-05-06T01:36:04-03:00">2015-05-06T01:36:04-03:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2015-05-06T01:47:36-03:00">2015-05-06T01:47:36-03:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="yellow">82.76%</span></span>
+    (<span class="covered_percent"><span class="yellow">84.88%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.33
+         1.37
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>3</b> files in total.
-    <b>87</b> relevant lines. 
-    <span class="green"><b>72</b> lines covered</span> and
-    <span class="red"><b>15</b> lines missed </span>
+    <b>86</b> relevant lines. 
+    <span class="green"><b>73</b> lines covered</span> and
+    <span class="red"><b>13</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -52,12 +52,12 @@
       
       <tr>
         <td class="strong"><a href="#3b84cb192b4813bfed906bc0b60696fdd5ae8589" class="src_link" title="app/models/Board.rb">app/models/Board.rb</a></td>
-        <td class="red strong">79.37 %</td>
-        <td>88</td>
-        <td>63</td>
-        <td>50</td>
-        <td>13</td>
-        <td>1.7</td>
+        <td class="yellow strong">82.26 %</td>
+        <td>87</td>
+        <td>62</td>
+        <td>51</td>
+        <td>11</td>
+        <td>1.8</td>
       </tr>
       
       <tr>
@@ -89,20 +89,20 @@
           <div class="file_list_container" id="Models">
   <h2>
     <span class="group_name">Models</span>
-    (<span class="covered_percent"><span class="yellow">82.76%</span></span>
+    (<span class="covered_percent"><span class="yellow">84.88%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.33
+         1.37
        </span>
     </span> hits/line)
   </h2>
   <a name="Models"></a>
   <div>
     <b>3</b> files in total.
-    <b>87</b> relevant lines. 
-    <span class="green"><b>72</b> lines covered</span> and
-    <span class="red"><b>15</b> lines missed </span>
+    <b>86</b> relevant lines. 
+    <span class="green"><b>73</b> lines covered</span> and
+    <span class="red"><b>13</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -120,12 +120,12 @@
       
       <tr>
         <td class="strong"><a href="#3b84cb192b4813bfed906bc0b60696fdd5ae8589" class="src_link" title="app/models/Board.rb">app/models/Board.rb</a></td>
-        <td class="red strong">79.37 %</td>
-        <td>88</td>
-        <td>63</td>
-        <td>50</td>
-        <td>13</td>
-        <td>1.7</td>
+        <td class="yellow strong">82.26 %</td>
+        <td>87</td>
+        <td>62</td>
+        <td>51</td>
+        <td>11</td>
+        <td>1.8</td>
       </tr>
       
       <tr>
@@ -240,11 +240,11 @@
         <div class="source_table" id="3b84cb192b4813bfed906bc0b60696fdd5ae8589">
   <div class="header">
     <h3>app/models/Board.rb</h3>
-    <h4><span class="red">79.37 %</span> covered</h4>
+    <h4><span class="yellow">82.26 %</span> covered</h4>
     <div>
-      <b>63</b> relevant lines. 
-      <span class="green"><b>50</b> lines covered</span> and
-      <span class="red"><b>13</b> lines missed.</span>
+      <b>62</b> relevant lines. 
+      <span class="green"><b>51</b> lines covered</span> and
+      <span class="red"><b>11</b> lines missed.</span>
     </div>
   </div>
   
@@ -560,220 +560,214 @@
         <li class="covered" data-hits="1" data-linenumber="52">
           <span class="hits">1</span>
           
-          <code class="ruby">    ship = nil</code>
+          <code class="ruby">    for s in @ships do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="53">
           <span class="hits">1</span>
           
-          <code class="ruby">    hit = false</code>
+          <code class="ruby">      if s.locationIs?(x, y) then</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="54">
           <span class="hits">1</span>
           
-          <code class="ruby">    for s in @ships do</code>
+          <code class="ruby">        s.hitAt(x, y)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="55">
           <span class="hits">1</span>
           
-          <code class="ruby">      if s.locationIs?(x, y) then</code>
+          <code class="ruby">        @lastHit = s</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="56">
           <span class="hits">1</span>
           
-          <code class="ruby">        s.hitAt(x, y)</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="57">
-          <span class="hits">1</span>
-          
-          <code class="ruby">        @lastHit = s</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="58">
-          <span class="hits">1</span>
-          
           <code class="ruby">        @hit = true</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="59">
+        <li class="never" data-hits="" data-linenumber="57">
           
           
           <code class="ruby">      end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="60">
+        <li class="never" data-hits="" data-linenumber="58">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="61">
+        <li class="covered" data-hits="1" data-linenumber="59">
           <span class="hits">1</span>
           
           <code class="ruby">    if @lastHit == nil then</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="62">
+        <li class="missed" data-hits="0" data-linenumber="60">
           
           
           <code class="ruby">      @water = true</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="63">
+        <li class="missed" data-hits="0" data-linenumber="61">
           
           
           <code class="ruby">      @hit = false</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="64">
+        <li class="covered" data-hits="1" data-linenumber="62">
           <span class="hits">1</span>
           
           <code class="ruby">    elsif @lastHit.gotSink?() then</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="65">
+        <li class="missed" data-hits="0" data-linenumber="63">
           
           
           <code class="ruby">      @sink = true</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="66">
+        <li class="missed" data-hits="0" data-linenumber="64">
           
           
-          <code class="ruby">      board.delete(s)</code>
+          <code class="ruby">      @ships.delete(s)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="67">
+        <li class="missed" data-hits="0" data-linenumber="65">
+          
+          
+          <code class="ruby">      @lastHit = nil</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="66">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="68">
+        <li class="never" data-hits="" data-linenumber="67">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="69">
+        <li class="never" data-hits="" data-linenumber="68">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="70">
+        <li class="covered" data-hits="1" data-linenumber="69">
           <span class="hits">1</span>
           
           <code class="ruby">  def getWater()</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="71">
+        <li class="missed" data-hits="0" data-linenumber="70">
           
           
           <code class="ruby">    water = @water</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="72">
+        <li class="missed" data-hits="0" data-linenumber="71">
           
           
           <code class="ruby">    @water = nil</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="73">
+        <li class="missed" data-hits="0" data-linenumber="72">
           
           
           <code class="ruby">    return water</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="74">
+        <li class="never" data-hits="" data-linenumber="73">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="75">
+        <li class="never" data-hits="" data-linenumber="74">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="76">
+        <li class="covered" data-hits="1" data-linenumber="75">
           <span class="hits">1</span>
           
           <code class="ruby">  def getHit()</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="77">
-          
+        <li class="covered" data-hits="1" data-linenumber="76">
+          <span class="hits">1</span>
           
           <code class="ruby">    hit = @hit</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="78">
-          
+        <li class="covered" data-hits="1" data-linenumber="77">
+          <span class="hits">1</span>
           
           <code class="ruby">    @hit = nil</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="79">
-          
+        <li class="covered" data-hits="1" data-linenumber="78">
+          <span class="hits">1</span>
           
           <code class="ruby">    return hit</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="79">
+          
+          
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="80">
           
           
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="81">
-          
-          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="82">
+        <li class="covered" data-hits="1" data-linenumber="81">
           <span class="hits">1</span>
           
           <code class="ruby">  def getSink()</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="83">
+        <li class="missed" data-hits="0" data-linenumber="82">
           
           
           <code class="ruby">    sink = @sink</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="84">
+        <li class="missed" data-hits="0" data-linenumber="83">
           
           
           <code class="ruby">    @sink = nil</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="85">
+        <li class="missed" data-hits="0" data-linenumber="84">
           
           
           <code class="ruby">    return sink</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="86">
+        <li class="never" data-hits="" data-linenumber="85">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="87">
+        <li class="never" data-hits="" data-linenumber="86">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="88">
+        <li class="never" data-hits="" data-linenumber="87">
           
           
           <code class="ruby">end</code>

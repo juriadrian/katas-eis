@@ -47,16 +47,24 @@ describe 'Battleship' do
     expect(@board.isEmptyPosition?("3:5")).to eq true
   end
 
-  it 'should miss the shot when there is no ship in that location'do
+  it 'should miss the shot when there is no ship in that location' do
     @board.shootAtPosition("3:3")
     expect(@board.getWater()).to eq true
     expect(@board.getHit()).to eq false
   end
 
-  it 'should hit the ship when there is a large ship in that location'do
+  it 'should hit the ship when there is a large ship in that location' do
     @board.createLargeShipInPosition("3:3")
     @board.shootAtPosition("3:3")
     expect(@board.getHit()).to eq true
+  end
+
+  it 'should sink the ship when there is a large ship in that location' do
+    @board.createLargeShipInPosition("3:3")
+    @board.shootAtPosition("3:3")
+    expect(@board.getHit()).to eq true
+    @board.shootAtPosition("3:4")
+    expect(@board.getSink()).to eq true
   end
 
 end
