@@ -15,3 +15,6 @@ gem 'guard'
 gem 'guard-rspec'
 gem 'byebug'
 
+
+gem 'erubis', '~> 2.7.0'
+gem 'padrino', '0.11.2'

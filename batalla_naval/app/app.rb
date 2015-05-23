@@ -1,17 +1,22 @@
 module Battleship
   class App < Padrino::Application
     register Padrino::Rendering
-    register Padrino::Mailer
     register Padrino::Helpers
-    register Padrino::Sprockets
-    #register Padrino::Admin::AccessControl
-    sprockets :minify => (Padrino.env == :production)
 
     enable :sessions
     
-    get '/' do
-        File.read(File.join('public', 'index.html'))
+    get 'mipagina' do
+      render 'batalla/inicio'
     end
+
+    post 'mipagina' do
+      @nombre = params[:nombre]
+      render 'batalla/inicio' 
+    end
+
+  end
+end
+
 
 
     ##
@@ -65,5 +70,4 @@ module Battleship
     #     render 'errors/505'
     #   end
     #
-  end
-end
+
