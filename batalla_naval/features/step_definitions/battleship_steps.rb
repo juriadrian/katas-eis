@@ -17,7 +17,8 @@ Then(/^position "(.*?)" is not empty$/) do |arg1|
 end
 
 Given(/^I create a large ship in position "(.*?)"$/) do |arg1|
-  @board.createLargeShipInPosition(arg1)
+  fill_in(:xyLarge, :with => arg1)
+  click_button "BTCreateLargeShip"
 end
 
 

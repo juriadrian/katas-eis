@@ -23,7 +23,13 @@ module Battleship
       render 'batalla/inicio' 
     end    
 
-
+    post 'createLargeShip' do
+      @xy = params[:xyLarge]
+      @board = session[:object]
+      @board.createSmallShipInPosition(@xy)
+      session[:object] = @board
+      render 'batalla/inicio' 
+    end    
 
 
 
