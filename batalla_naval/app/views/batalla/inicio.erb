@@ -19,25 +19,37 @@
 	</form>
  
  	<form method="POST" action="createSmallShip">
+ 		<%= csrf_token_field %>
  		Crear barco chico en: 
  		<input type="text" name="xy" placeholder="3:3" />
 		<input type="submit" value="Crear Barco" id="BTCreateSmallShip">
  	</form>
 	
 	<form method="POST" action="createLargeShip">
+		<%= csrf_token_field %>
  		Crear barco grande en: 
  		<input type="text" name="xyLarge" placeholder="3:3" />
 		<input type="submit" value="Crear Barco" id="BTCreateLargeShip">
  	</form>
 
  	<form method="POST" action="shootAtPosition">
+ 		<%= csrf_token_field %>
  		Disparar a posicion:
  		<input type="text" name="xyShoot" placeholder="3:3">
  		<input type="submit" value="Disparar" id="BTShootAt">
  	</form>
 
- 	<%if @hit.present?()%>
+ 	<%if @hit%>
  		<h3>Te han disparado!!</h3>
+ 	<%end%>
+
+
+ 	<%if @miss%>
+ 		<h3>Te han agua!!</h3>
+ 	<%end%>
+
+ 	<%if @sink%>
+ 		<h3>Te han hundido!!</h3>
  	<%end%>
 
 	</body>

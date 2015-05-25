@@ -26,7 +26,7 @@ module Battleship
     post 'createLargeShip' do
       @xy = params[:xyLarge]
       @board = session[:object]
-      @board.createSmallShipInPosition(@xy)
+      @board.createLargeShipInPosition(@xy)
       session[:object] = @board
       render 'batalla/inicio' 
     end
@@ -36,6 +36,8 @@ module Battleship
       @board = session[:object]
       @board.shootAtPosition(@xy)
       @hit = @board.getHit()
+      @miss = @board.getWater()
+      @sink = @board.getSink()
       session[:object] = @board 
       render 'batalla/inicio' 
     end

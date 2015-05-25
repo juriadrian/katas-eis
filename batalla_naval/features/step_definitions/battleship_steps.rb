@@ -39,9 +39,9 @@ Then(/^I get hit$/) do
 end
 
 Then(/^I get water$/) do
-  @board.getWater()
+  expect(page.has_content?("agua")).to eq false
 end
 
 Then(/^I get sink$/) do
-  @board.getSink()
+  expect(page.has_content?("hundido")).to eq true
 end

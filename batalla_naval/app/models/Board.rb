@@ -56,14 +56,14 @@ class Board
         @hit = true
       end
     end
-    if @lastHit == nil then
+    if @lastHit.nil? then
       @water = true
       @hit = false
     elsif @lastHit.gotSink?() then
       @sink = true
       @ships.delete(s)
-      @lastHit = nil
     end
+    @lastHit = nil
   end
 
   def getWater()
