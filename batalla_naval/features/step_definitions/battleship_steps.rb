@@ -25,15 +25,17 @@ end
 
 
 Given(/^a large ship in position: "(.*?)"$/) do |arg1|
-  @board.createLargeShipInPosition(arg1)
+  fill_in(:xyLarge, :with => arg1)
+  click_button "BTCreateLargeShip"
 end
 
 Given(/^I shoot to position "(.*?)"$/) do |arg1|
-  @board.shootAtPosition(arg1)
+  fill_in(:xyShoot, :with => arg1)
+  click_button "BTShootAt"
 end
 
 Then(/^I get hit$/) do
-  @board.getHit()
+	expect(page.has_content?("disparado")).to eq true
 end
 
 Then(/^I get water$/) do

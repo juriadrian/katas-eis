@@ -9,4 +9,13 @@ class SmallShip
   		return @x == x && @y == y
   	end
 
+  	def hitAt(x,y)
+  		@x = nil
+  		@y = nil
+  	end
+
+  	def gotSink?()
+  		return @x == nil 
+  	end
+
 end

@@ -29,7 +29,18 @@ module Battleship
       @board.createSmallShipInPosition(@xy)
       session[:object] = @board
       render 'batalla/inicio' 
-    end    
+    end
+
+    post 'shootAtPosition' do
+      @xy = params[:xyShoot]
+      @board = session[:object]
+      @board.shootAtPosition(@xy)
+      @hit = @board.getHit()
+      session[:object] = @board 
+      render 'batalla/inicio' 
+    end
+
+
 
 
 

@@ -20,15 +20,25 @@
  
  	<form method="POST" action="createSmallShip">
  		Crear barco chico en: 
- 		<input type="text" name="xy" />
+ 		<input type="text" name="xy" placeholder="3:3" />
 		<input type="submit" value="Crear Barco" id="BTCreateSmallShip">
  	</form>
 	
 	<form method="POST" action="createLargeShip">
  		Crear barco grande en: 
- 		<input type="text" name="xyLarge" />
+ 		<input type="text" name="xyLarge" placeholder="3:3" />
 		<input type="submit" value="Crear Barco" id="BTCreateLargeShip">
  	</form>
+
+ 	<form method="POST" action="shootAtPosition">
+ 		Disparar a posicion:
+ 		<input type="text" name="xyShoot" placeholder="3:3">
+ 		<input type="submit" value="Disparar" id="BTShootAt">
+ 	</form>
+
+ 	<%if @hit.present?()%>
+ 		<h3>Te han disparado!!</h3>
+ 	<%end%>
 
 	</body>
 </html>
