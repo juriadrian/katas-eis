@@ -1,15 +1,19 @@
 require_relative '../../app/models/Board.rb'
 
 Given(/^a board with dimensions "(.*?)" x "(.*?)"$/) do |arg1, arg2|
-  @board = Board.new arg1, arg2
+  visit "/mipagina"
+  fill_in(:tableroAncho, :with => arg1)
+  fill_in(:tableroAlto, :with => arg2)
+  click_button "BTCrearTablero"
 end
 
 Given(/^I create a small ship in position "(.*?)"$/) do |arg1|
-  @board.createSmallShipInPosition(arg1)
+  fill_in(:xy, :with => arg1)
+  click_button "BTCreateSmallShip"
 end
 
 Then(/^position "(.*?)" is not empty$/) do |arg1|
-  @board.isEmptyPosition?(arg1).should eq false
+	expect(page.has_content?(arg1)).to eq false
 end
 
 Given(/^I create a large ship in position "(.*?)"$/) do |arg1|

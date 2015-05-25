@@ -9,10 +9,30 @@ module Battleship
       render 'batalla/inicio'
     end
 
-    post 'mipagina' do
-      @nombre = params[:nombre]
+    post 'crearTablero' do
+      @board = Board.new(params[:tableroAncho].to_i, params[:tableroAlto].to_i)
+      session[:object] = @board
       render 'batalla/inicio' 
     end
+
+    post 'createSmallShip' do
+      @xy = params[:xy]
+      @board = session[:object]
+      @board.createSmallShipInPosition(@xy)
+      session[:object] = @board
+      render 'batalla/inicio' 
+    end    
+
+
+
+
+
+
+
+
+
+
+
 
   end
 end

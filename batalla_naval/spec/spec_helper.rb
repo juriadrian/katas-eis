@@ -23,3 +23,4 @@ end
 def app
   BatallaNaval::App.tap { |app|  }
 end
+

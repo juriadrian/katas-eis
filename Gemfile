@@ -14,7 +14,9 @@ gem 'simplecov', "0.8.0.pre"
 gem 'guard'   
 gem 'guard-rspec'
 gem 'byebug'
-
+gem 'rack'
+gem 'rack-test', :require => 'rack/test'
 
 gem 'erubis', '~> 2.7.0'
 gem 'padrino', '0.11.2'
+

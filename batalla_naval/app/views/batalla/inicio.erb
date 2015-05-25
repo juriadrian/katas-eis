@@ -5,17 +5,26 @@
 	</head>
 	<body>
 
-	<h1>Hola</h1>
+	<h1>BATTLE SHIP</h1>
 
-	<p>El parametro nombre vale: <%= @nombre %></p>
-	
 
-	<form method="POST" action="mipagina">
+
+	<form method="POST" action="crearTablero">
 		 <%= csrf_token_field %>
-		 Establecer nuevo valor para nombre:
-		<input type="text" name="nombre" />
-		<input type="submit" value="enviar"/>
+		 Crear tablero de: Ancho 
+		<input type="text" name="tableroAncho" />
+		Alto 
+		<input type="text" name="tableroAlto" />
+		<input type="submit" value="CrearTablero" id="BTCrearTablero"/>
 	</form>
+ 
+ 	<form method="POST" action="createSmallShip">
+ 		Crear barco en: 
+ 		<input type="text" name="xy" />
+		<input type="submit" value="Crear Barco" id="BTCreateSmallShip">
+
+ 	</form>
+	
 
 	</body>
 </html>
