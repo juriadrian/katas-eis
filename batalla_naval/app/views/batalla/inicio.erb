@@ -2,54 +2,74 @@
 <html lang="en-US">
 	<head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 	</head>
 	<body>
 
 	<h1>BATTLE SHIP</h1>
 
+	<form method="POST" action="createBoard">
+		<%= csrf_token_field %>
+	 	<div class="col-lg-4">
+	 		<div class="input-group">
+				<input type="text" class="form-control" name="tableroAncho" placeholder="Ancho" />
+				<input type="text" class="form-control" name="tableroAlto" placeholder="Alto"/>
+  		</div>
+			<span class="input-group-btn">
+				<input type="submit" class="btn btn-default navbar-btn" value="CrearTablero" id="BTCreateBoard"/>
+	    </span>
+  	</div>
+  </form>
 
-
-	<form method="POST" action="crearTablero">
-		 <%= csrf_token_field %>
-		 Crear tablero de: Ancho 
-		<input type="text" name="tableroAncho" />
-		Alto 
-		<input type="text" name="tableroAlto" />
-		<input type="submit" value="CrearTablero" id="BTCrearTablero"/>
-	</form>
  
  	<form method="POST" action="createSmallShip">
  		<%= csrf_token_field %>
- 		Crear barco chico en: 
- 		<input type="text" name="xy" placeholder="3:3" />
-		<input type="submit" value="Crear Barco" id="BTCreateSmallShip">
+		<div class="input-group" style="clear:both;">
+			<div class="col-lg-4"  >
+	 			<input type="text" class="form-control" name="xy" placeholder="3:3"/>
+	 			<span class="input-group-btn">
+					<input type="submit" class="btn btn-default navbar-btn" value="Crear Barco Pequeño" id="BTCreateSmallShip">
+	    	</span>
+    	</div>
+    </div>
  	</form>
 	
 	<form method="POST" action="createLargeShip">
 		<%= csrf_token_field %>
- 		Crear barco grande en: 
- 		<input type="text" name="xyLarge" placeholder="3:3" />
-		<input type="submit" value="Crear Barco" id="BTCreateLargeShip">
+		<div class="input-group" style="clear:both;">
+			<div class="col-lg-4" >
+	 			<input type="text" class="form-control" name="xyLarge" placeholder="3:3" />
+	 			<span class="input-group-btn">
+					<input type="submit" class="btn btn-default navbar-btn" value="Crear Barco Grande" id="BTCreateLargeShip">
+	    	</span>
+	    </div>
+	  </div>
  	</form>
 
  	<form method="POST" action="shootAtPosition">
  		<%= csrf_token_field %>
- 		Disparar a posicion:
- 		<input type="text" name="xyShoot" placeholder="3:3">
- 		<input type="submit" value="Disparar" id="BTShootAt">
+		<div class="input-group" style="clear:both;">
+ 			<div class="col-lg-4">
+	 			<input type="text" class="form-control" name="xyShoot" placeholder="3:3">
+	 			<span class="input-group-btn">
+		 			<input type="submit" class="btn btn-default navbar-btn" value="Disparar" id="BTShootAt">
+	    	</span>
+    	</div>
+    </div>
  	</form>
 
+
  	<%if @hit%>
- 		<h3>Te han disparado!!</h3>
+ 		<h3>Disparo Acertado</h3>
  	<%end%>
 
 
  	<%if @miss%>
- 		<h3>Te han agua!!</h3>
+ 		<h3>Disparo al Agua</h3>
  	<%end%>
 
  	<%if @sink%>
- 		<h3>Te han hundido!!</h3>
+ 		<h3>Barco Hundido</h3>
  	<%end%>
 
 	</body>

@@ -4,7 +4,7 @@ Given(/^a board with dimensions "(.*?)" x "(.*?)"$/) do |arg1, arg2|
   visit "/mipagina"
   fill_in(:tableroAncho, :with => arg1)
   fill_in(:tableroAlto, :with => arg2)
-  click_button "BTCrearTablero"
+  click_button "BTCreateBoard"
 end
 
 Given(/^I create a small ship in position "(.*?)"$/) do |arg1|
@@ -35,13 +35,13 @@ Given(/^I shoot to position "(.*?)"$/) do |arg1|
 end
 
 Then(/^I get hit$/) do
-	expect(page.has_content?("disparado")).to eq true
+	expect(page.has_content?("Acertado")).to eq true
 end
 
 Then(/^I get water$/) do
-  expect(page.has_content?("agua")).to eq false
+  expect(page.has_content?("Agua")).to eq false
 end
 
 Then(/^I get sink$/) do
-  expect(page.has_content?("hundido")).to eq true
+  expect(page.has_content?("Hundido")).to eq true
 end

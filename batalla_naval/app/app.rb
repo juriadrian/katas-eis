@@ -9,7 +9,7 @@ module Battleship
       render 'batalla/inicio'
     end
 
-    post 'crearTablero' do
+    post 'createBoard' do
       @board = Board.new(params[:tableroAncho].to_i, params[:tableroAlto].to_i)
       session[:object] = @board
       render 'batalla/inicio' 
@@ -41,18 +41,6 @@ module Battleship
       session[:object] = @board 
       render 'batalla/inicio' 
     end
-
-
-
-
-
-
-
-
-
-
-
-
   end
 end
 
